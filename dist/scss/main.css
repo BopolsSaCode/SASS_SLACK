@@ -34,7 +34,6 @@ body {
   background-color: hsl(294, 54%, 27%);
   color: white;
   border-radius: 4px;
-  transition: 0.5s ease;
 }
 
 .button-light {
@@ -44,7 +43,6 @@ body {
   color: hsl(294, 54%, 27%);
   border: 1px solid hsl(294, 54%, 27%);
   border-radius: 4px;
-  transition: 0.5s ease;
 }
 
 /*COMPONENTS*/
@@ -87,7 +85,7 @@ body {
 .header__nav img {
   width: 14rem;
   padding-left: 1.5rem;
-  padding-top: 2rem;
+  margin-top: 1.5rem;
 }
 .header__nav ul {
   flex-direction: column;
@@ -98,24 +96,23 @@ body {
   text-align: left;
   padding: 1.5rem 0;
   padding-left: 2.5rem;
-  font-style: semi-bold;
 }
 .header__nav ul li a {
   font-size: 1.8rem;
-  color: hsl(300, 62.16%, 14.51%);
+  color: hsl(294, 54%, 27%);
 }
 .header__nav ul li a:after {
   width: 0;
 }
 .header__nav__btn {
-  margin-top: 20rem;
+  margin-top: 27rem;
   background: hsl(0, 0%, 100%);
-  padding: 3rem;
+  padding: 4rem 2rem 3rem 2rem;
   box-shadow: rgba(0, 0, 0, 0.15) 20px 0px 5px;
 }
 .header__nav__btn a {
-  text-align: center;
   display: flex;
+  justify-content: center;
 }
 .header__nav__btn a:nth-child(2) {
   margin-top: 2rem;
@@ -134,14 +131,14 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5rem;
   display: block;
-  position: absolute;
 }
 .header__actions .toggle__menu span:nth-child(2) {
-  margin: 0.3rem 0;
+  margin: 0.2rem 0;
 }
 .header__actions .toggle__menu.open span:first-child {
   transform: translateY(5px) rotate(225deg);
   transition: 0.5s ease;
+  background-color: hsl(0, 0%, 0%);
 }
 .header__actions .toggle__menu.open span:nth-child(2) {
   opacity: 0;
@@ -150,6 +147,7 @@ body {
 .header__actions .toggle__menu.open span:last-child {
   transform: translateY(-5px) rotate(-225deg);
   transition: 0.5s ease;
+  background-color: hsl(0, 0%, 0%);
 }
 .header__actions__btn {
   display: none;
