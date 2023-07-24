@@ -1,0 +1,18 @@
+.button-dark {
+  display: inline-block;
+  padding: 2rem 3rem;
+  background-color: $clr-primary;
+  color: white;
+  border-radius:4px;
+  transition: .5s ease;
+}
+
+.button-light {
+  display: inline-block;
+  padding: 2rem 3rem;
+  background-color: white;
+  color: $clr-primary;
+  border: 1px solid $clr-primary;
+  border-radius:4px;
+  transition: .5s ease;
+}
