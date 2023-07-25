@@ -1,5 +1,20 @@
 .header {
     background: $clr-primary;
+    position: relative;
+    position: fixed;
+    width: 100%;
+    .container{
+        transition: 1s ease;
+    }
+    &.white{
+        background: transparent;
+        .container{
+            background:$clr-dprimary;
+            border-radius: 5rem;
+            margin-top: 5rem;
+            transition: 1s ease;
+        }
+    }
     &__wrapper{
         display: flex;
         align-items: center;
@@ -30,46 +45,88 @@
         width: 100%;
         height: 100vh;
         transition: .5s ease;
+        .toggle__menu{
+            z-index: 999;
+            &.open span{
+                width:2.5rem;
+                height:.2rem;
+                background-color: $clr-primary;
+                border-radius: 5rem;
+                &:nth-child(2){
+                    margin:.2rem 0;
+                }
+            }
+        }
         &.open {
             right:0rem;
             transition: .5s ease;
         }
         img {
-            width:14rem;
+            width:15rem;
+            padding-top: 2rem;
             padding-left: 1.5rem;
-            margin-top: 1.5rem;
         }
-        ul{
+        ul.nav{
+            display: flex;
             flex-direction: column;
-            gap:0;
-            padding: 4rem 0;
+            margin-top:6rem;
             li {
-                text-align: left;
-                padding: 1.5rem 0;
-                padding-left:2.5rem;
+                padding: 2rem;
                 a {
-                    font-size:1.8rem;
-                    color: $clr-primary;
-                    &:after {
-                        width: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size:2rem;
+                    color: $clr-dark;
+                    i{
+                        color: $clr-dark;
+                        transition: .1s ease;
+                        &.open{
+                            transform: rotate(180deg);
+                            transition: .1s ease;
+                        }
+                        
                     }
+                }
+            }
+            ul.drop{
+                margin: 0 3rem;
+                max-height:0rem;
+                overflow: hidden;
+                transition: .5s ease;
+                background: $clr-light;
+                li {
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+                &.open{
+                    max-height: 50rem;
+                    transition: .5s ease;
+                    background: $clr-light;
                 }
             }
         }
 
         &__btn{
-            margin-top:27rem;
+            position: absolute;
+            width: 100%;
+            bottom:0;
             background: $clr-light;
-            padding: 4rem 2rem 3rem 2rem;
-            box-shadow: rgba(0, 0, 0, 0.15) 20px 0px 5px;
+            padding: 2rem;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            
             a {
-                display: flex;
-                justify-content: center;
-                &:nth-child(2){
-                    margin-top: 2rem;
-                }
+                width:100%;
+                text-align: center;
+                align-items: center;
             }
         }
+
+        
+
     }
 
     &__actions{
@@ -82,8 +139,9 @@
             }
         }
         .toggle__menu{
+            z-index: 999;
             span{
-                width:2.5rem;
+                width:1.5rem;
                 height:.2rem;
                 background-color: $clr-light;
                 border-radius: 5rem;
@@ -95,26 +153,68 @@
 
             &.open {
                 span:first-child {
-                    transform: translateY(5px) rotate(225deg);
+                    transform: translateY(5.5px) rotate(225deg);
                     transition: 0.5s ease;
                     background-color: $clr-dark;
+                    width:1.5rem;
                 }
                 span:nth-child(2) {
                     opacity: 0;
                     transition: .5s ease;
                 }
                 span:last-child {
-                    transform: translateY(-5px) rotate(-225deg);
+                    transform: translateY(-2.5px) rotate(-225deg);
                     transition: .5s ease;
                     background-color: $clr-dark;
-                    
+                    width:1.5rem;
                 }
-
-
             }
         }
         &__btn{
             display: none;
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__nav{
+            display: none;
+        }
+        .branding{
+            ul{
+                display: flex;
+                gap:2rem;
+                margin-left:3rem;;
+                li{
+                    transition: .5s ease;
+                    a{
+                        color: $clr-light;
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        i{
+                            font-size: 1rem;
+                        }
+                    }
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: .5s ease;
+                    }
+                }
+            }
+        }
+        &__actions{
+            .toggle__menu{
+                display: none;
+            }
+            &__btn{
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                .sign{
+                    color: $clr-light;
+                }
+            }
         }
     }
 }
