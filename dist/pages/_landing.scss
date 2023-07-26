@@ -199,23 +199,103 @@
 
 .alternate {
     background: $clr-fwhite;
-    &__content{
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    &__wrapper{
         display: flex;
         flex-direction: column;
-        gap: 5rem;
-        video{
-            width:40rem;
-        }
+        gap:6rem;
+    }
+    &__content{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            &:last-child{
+                a{
+                    &::after{
+                        width:0%;
+                        height: 0.2rem;
+                        content: "";
+                        display: block;
+                        background-color: $clr-lightblue;
+                    }
+        
+                    &:hover::after{
+                        width: 52%;
+                        transition: .5s ease;
+                    }
+                    &:hover{
+                        color: $clr-lightblue;
+                        transition: .5s ease;
+                      }
+                }
+            }
+            &:nth-child(even){
+                a{
+                    &::after{
+                        width:0%;
+                        height: 0.2rem;
+                        content: "";
+                        display: block;
+                        background-color: $clr-lightblue;
+                    }
+        
+                    &:hover::after{
+                        width: 76%;
+                        transition: .5s ease;
+                    }
+                    &:hover{
+                        color: $clr-lightblue;
+                        transition: .5s ease;
+                    }
+                }
+                video{
+                    margin-left:8rem;
+                }
+            }
+            video{
+                width:40rem;
+            }
     }
 
     &__text{
-        padding: 0 1rem;
-        position: relative;
-        
+        padding:1rem 1rem;
         h3{
+            margin-bottom: 1.5rem;
             font-size: 3rem;
+        }
+        p{
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        a {
+            color: $clr-lightblue;
+            font-size: 1.8rem;
+            &::after{
+                width:0%;
+                height: 0.2rem;
+                content: "";
+                display: block;
+                background-color: $clr-lightblue;
+            }
+
+            &:hover::after{
+                width: 67.5%;
+                transition: .5s ease;
+            }
+            &:hover{
+                color: $clr-lightblue;
+                transition: .5s ease;
+              }
         }
     }
 
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap:6rem;
+        }
+    }
 
 }
