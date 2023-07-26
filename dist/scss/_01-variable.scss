@@ -1,10 +1,15 @@
+
 $clr-primary:hsl(294, 54%, 27%);
 $clr-dprimary: hsl(300,62.16%,14.51%);
 $clr-fwhite:hsl(34, 42%, 93%);
 $clr-light:hsl(0,0%,100%);
 $clr-dark:hsl(0, 0%, 0%);
+$clr-yellow:hsl(42,83%,55%);
+$clr-blue:hsl(217,89%,61%);
 
-$ff-primary:'Raleway', sans-serif;
+$ff-primary: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+
+$ff-secondary: "Raleway", sans-serif;
 
 $break-sm:500px;
 $break-md:760px;

@@ -7,4 +7,7 @@ html {
     line-height: 1.4;
     font-family: $ff-primary;
     height:10000px;
+    &.body.open{
+       overflow-y: hidden;
+    }
     }

@@ -1,3 +1,221 @@
 .banner {
+    padding-top: 10rem;
     background: $clr-primary;
+    position: relative;
+    .container{
+        padding:0 1rem;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        height: 85vh;
+    }
+    video{
+        @include imgFit (100%, 400px);
+        position: absolute;
+        bottom:0;
+        left: 0;
+    }
+    &__text{
+        text-align: center;
+        h2{
+            line-height: 1;
+            font-size: 4rem;
+            color: $clr-light;
+            margin-bottom: 1rem;
+            span{
+                color:$clr-yellow;
+            }
+        }
+        p{
+            color: $clr-light;
+            max-width: 40rem;
+            margin: 0 auto;
+            &:last-child{
+                display: none;
+            }
+        }
+        &__btn{
+            margin-top:1.5rem;
+            width: 100%;
+            padding: 2rem;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            a {
+                width:100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                &:last-child{
+                    position: relative;
+                    img{
+                        @include imgFit(4rem, 4rem);
+                        background:$clr-light;
+                        position: absolute;
+                        left:4px;
+                        border-radius:.2rem;
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            height:100%;
+            padding-bottom:8rem;
+        }
+        &__content{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            gap:2rem;
+            align-items: center;
+        }
+
+        &__text{
+            text-align: left;
+            h2{
+                line-height: 1;
+                font-size: 6rem;
+                color: $clr-light;
+                margin-bottom: 1rem;
+                max-width: 62rem;
+                span{
+                    color:$clr-yellow;
+                }
+            }
+            p{
+                max-width:65rem;
+                margin-left:0;
+                max-width: 55rem;
+                font-weight: 600;
+                &:last-child{
+                    display: unset;
+                }
+            }
+            &__btn{
+                margin-top:1.5rem;
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: row;
+                width:85%;
+                gap:1rem;
+            }
+        }
+
+        video{
+            @include imgFit (110%, 450px);
+            position: unset;
+            bottom: 0;
+        }
+
+    }
+}
+
+.trust{
+    padding-top: 3rem;
+    background: $clr-fwhite;
+
+    .container{
+        padding:0 1rem;
+    }
+
+    &__items{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    &__text{
+        text-align: center;
+        p{
+            font-size: 1.5rem;
+           color: $clr-dark;
+           font-weight: 600;
+        }
+    }
+
+    &__images{
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        justify-content: center;
+        img{
+            padding:2rem 1.5rem;
+            &#air{
+                width: 15rem;
+            }
+            &#target{
+                width: 8rem;
+            }
+            &#nasa{
+                width: 10rem;
+            }
+            &#uber{
+                width: 11rem;
+            }
+            &#nyt{
+                width: 20rem;
+            }
+            &#etsy{
+                width: 10rem;
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+
+        &__images{
+            padding:1rem 1.5rem;
+            gap:5rem;
+            img{
+                max-width:100%;
+                &#air{
+                    width: 15rem;
+                }
+                &#target{
+                    width: 8rem;
+                }
+                &#nasa{
+                    width: 10rem;
+                }
+                &#uber{
+                    width: 11rem;
+                }
+                &#nyt{
+                    width: 20rem;
+                }
+                &#etsy{
+                    width: 10rem;
+                }
+            }
+        }
+
+    }
+    
+}
+
+.alternate {
+    background: $clr-fwhite;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        video{
+            width:40rem;
+        }
+    }
+
+    &__text{
+        padding: 0 1rem;
+        position: relative;
+        
+        h3{
+            font-size: 3rem;
+        }
+    }
+
+
 }

@@ -4,7 +4,7 @@
   padding: 1.5rem 1rem;
   border: 1px solid transparent;
   color: $clr-dark;
-  border-radius:1rem;
+  border-radius:.3rem;
   font-weight: 550;
   position: relative;
   transition: .5s ease;
@@ -19,7 +19,7 @@
         width: 0%;
         height: 100%;
         background-color: $clr-light;
-        border-radius:1rem;
+        border-radius:.3rem;
         transform-origin: left;
         display: block;
         position: absolute;
@@ -49,7 +49,7 @@
         width: 0%;
         height: 100%;
         background-color: $clr-primary;
-        border-radius: 1rem;
+        border-radius: .3rem;
         transform-origin: left;
         display: block;
         position: absolute;
@@ -68,5 +68,35 @@
         transition: .5s ease;
       }
     }
+
+    &--blue{
+      background: $clr-blue;
+      color: $clr-light;
+      border: 1px solid $clr-blue;
+      transition: .5s ease;
+      &::before{
+        content:"";
+        width: 0%;
+        height: 100%;
+        background-color: $clr-light;
+        border-radius: .3rem;
+        transform-origin: left;
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        transition: .5s ease;
+        z-index: -1;
+      }
+      &:hover::before{
+        width: 100%;
+        transition: .5s ease;
+      }
+      &:hover{
+        z-index: 999;
+        color: $clr-blue;
+        transition: .5s ease;
+      }
   }
+}
 }
