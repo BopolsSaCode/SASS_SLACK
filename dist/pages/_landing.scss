@@ -14,7 +14,7 @@
     video{
         @include imgFit (100%, 400px);
         position: absolute;
-        bottom:0;
+        bottom: 0;
         left: 0;
     }
     &__text{
@@ -166,7 +166,7 @@
     }
 
     @include mediaQuery($break-lg){
-
+        padding: 5rem;
         &__images{
             padding:1rem 1.5rem;
             gap:5rem;
@@ -199,8 +199,7 @@
 
 .alternate {
     background: $clr-fwhite;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding:3rem 0;
     &__content{
             display: flex;
             flex-direction: column;
@@ -325,15 +324,19 @@
 }
 
 .stats {
-    padding-top: 3rem;
-    padding-bottom: 5rem;
+    padding:3rem 0;
+    &__wrapper{
+        img{
+            display: none;
+        }
+    }
     .container{
         padding:0 1rem;
     }
     &__content{
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 1rem;
     }
     &__text{
         text-align: center;
@@ -386,6 +389,49 @@
     }
 
     @include mediaQuery($break-lg){
+        padding: 0;
+        &__wrapper{
+            padding: 10rem;
+            position: relative;
+            img{
+                display: unset;
+                position: absolute;
+                &#icon1{
+                    top:3%;
+                    left:8%;
+                    width: 12rem;
+                }
+                &#icon2{
+                    top:5%;
+                    right: 0;
+                    left: 87%;
+                    width:9rem;
+                }
+                &#icon3{
+                    top:27%;
+                    left:0;
+                    width: 10rem;
+                }
+                &#icon4{
+                    top:26%;
+                    right: 0;
+                    left: 82%;
+                    width: 9rem;
+                }
+                &#icon5{
+                    top: 39%;
+                    bottom: 0;
+                    left: 15%;
+                    width: 10rem;
+                }
+                &#icon6{
+                    top: 39%;
+                    right: 0;
+                    left: 91%;
+                    width: 10rem;
+                }
+            }
+        }
         &__text{
             h2{
                 font-size: 5rem;
@@ -422,7 +468,7 @@
 }
 
 .project{
-    padding-top: 3rem;
+    padding-top:3rem;
     &__wrapper{
         h4{
             margin-top: 4rem;
@@ -461,7 +507,7 @@
             }
             
             &:hover::after{
-                width: 47.5%;
+                width: 34%;
                 transition: .5s ease;
             }
         }
@@ -484,6 +530,7 @@
     }
 
     @include mediaQuery($break-lg){
+        padding: 0;
         &__wrapper{
             max-width:150rem;
             margin: 0 auto;
@@ -505,6 +552,54 @@
             }
             p{
                 max-width: unset;
+            }
+        }
+    }
+}
+
+.free{
+    background-color: $clr-dprimary;
+    min-height: 370px;
+    clip-path: ellipse(85% 100% at center top);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        h2{
+            font-size: 2.8rem;
+            color: $clr-light;
+            text-align: center;
+        }
+        a{
+            font-size: 1.5rem;
+        }
+    }
+    &__text__btn{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        a{
+            width:35rem;
+            margin: 0 auto;
+        }
+    }
+
+    @include mediaQuery($break-lg){
+        &__content{
+            h2{
+                font-size: 4rem;
+            }
+        }
+        &__text__btn{
+            justify-content: center;
+            flex-direction: row;
+            a{
+                margin:0;
+                width: 25rem;
             }
         }
     }

@@ -24,3 +24,5 @@ window.addEventListener("scroll", () => {
   kamote.classList.remove("white");
  }
 });
+
+
