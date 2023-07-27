@@ -1,6 +1,6 @@
 .header {
     z-index: 999;
-    background: $clr-primary;
+    background: $clr-dprimary;
     position: relative;
     position: fixed;
     width: 100%;
@@ -12,7 +12,7 @@
         .container{
             background:$clr-dprimary;
             border-radius: 5rem;
-            margin-top: 5rem;
+            margin-top: 1rem;
             transition: 1s ease;
         }
     }
@@ -141,6 +141,7 @@
         }
         .toggle__menu{
             z-index: 999;
+            cursor: pointer;
             span{
                 width:1.5rem;
                 height:.2rem;
