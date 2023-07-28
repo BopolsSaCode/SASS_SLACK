@@ -9,7 +9,7 @@
   transition: .5s ease;
   &.bg{
     &--primary{
-      background: $clr-dprimary;
+      background: $clr-primary;
       color: $clr-light;
       border:1px solid $clr-light;
       border-radius:.3rem;
@@ -48,7 +48,7 @@
         content:"";
         width: 0%;
         height: 100%;
-        background-color: $clr-dprimary;
+        background-color: $clr-primary;
         border-radius: .3rem;
         transform-origin: left;
         display: block;

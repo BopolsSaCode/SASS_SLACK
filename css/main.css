@@ -42,7 +42,7 @@ body.body.open {
   transition: 0.5s ease;
 }
 .btn.bg--primary {
-  background: hsl(300, 62.16%, 14.51%);
+  background: hsl(294, 54%, 27%);
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 0.3rem;
@@ -81,7 +81,7 @@ body.body.open {
   content: "";
   width: 0%;
   height: 100%;
-  background-color: hsl(300, 62.16%, 14.51%);
+  background-color: hsl(294, 54%, 27%);
   border-radius: 0.3rem;
   transform-origin: left;
   display: block;
@@ -709,7 +709,7 @@ body.body.open {
 /*COMPONENTS*/
 .header {
   z-index: 999;
-  background: hsl(300, 62.16%, 14.51%);
+  background: hsl(294, 54%, 27%);
   position: relative;
   position: fixed;
   width: 100%;
@@ -721,7 +721,7 @@ body.body.open {
   background: transparent;
 }
 .header.white .container {
-  background: hsl(300, 62.16%, 14.51%);
+  background: hsl(294, 54%, 27%);
   border-radius: 5rem;
   margin-top: 1rem;
   transition: 1s ease;
@@ -912,7 +912,7 @@ body.body.open {
 
 .banner {
   padding-top: 10rem;
-  background: hsl(300, 62.16%, 14.51%);
+  background: hsl(294, 54%, 27%);
   position: relative;
 }
 .banner .container {
@@ -1386,18 +1386,6 @@ body.body.open {
 .project__text a {
   color: hsl(206, 76%, 36%);
 }
-.project__text a::after {
-  width: 0%;
-  height: 0.2rem;
-  content: "";
-  display: block;
-  background-color: hsl(206, 76%, 36%);
-  transition: 0.5s ease;
-}
-.project__text a:hover::after {
-  width: 34%;
-  transition: 0.5s ease;
-}
 .project__text h3 {
   font-size: 2.2rem;
   font-weight: lighter;
@@ -1440,10 +1428,25 @@ body.body.open {
   .project__text p {
     max-width: unset;
   }
+  .project__text a {
+    color: hsl(206, 76%, 36%);
+  }
+  .project__text a::after {
+    width: 0%;
+    height: 0.2rem;
+    content: "";
+    display: block;
+    background-color: hsl(206, 76%, 36%);
+    transition: 0.5s ease;
+  }
+  .project__text a:hover::after {
+    width: 34%;
+    transition: 0.5s ease;
+  }
 }
 
 .free {
-  background-color: hsl(300, 62.16%, 14.51%);
+  background-color: hsl(294, 54%, 27%);
   min-height: 370px;
   -webkit-clip-path: ellipse(85% 100% at center top);
           clip-path: ellipse(85% 100% at center top);
@@ -1476,7 +1479,7 @@ body.body.open {
 }
 @media screen and (min-width: 940px) {
   .free__content h2 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .free__text__btn {
     justify-content: center;
@@ -1486,4 +1489,83 @@ body.body.open {
     margin: 0;
     width: 25rem;
   }
+}
+
+.slack {
+  padding: 2rem 0;
+}
+.slack__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.slack__nav ul.nav {
+  display: flex;
+  flex-direction: column;
+}
+.slack__nav ul.nav li a {
+  display: flex;
+  justify-content: center;
+  padding: 1.8rem;
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 0%);
+  justify-content: space-between;
+  font-weight: 600;
+}
+.slack__nav ul.nav li a i {
+  color: hsl(0, 0%, 0%);
+  transition: 0.1s ease;
+}
+.slack__nav ul.nav li a i.open {
+  transform: rotate(180deg);
+  transition: 0.1s ease;
+}
+.slack__nav ul.nav ul.drop1 {
+  margin: 0 3rem;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+  background: hsl(0, 0%, 100%);
+}
+.slack__nav ul.nav ul.drop1 li {
+  padding: 0.5rem 0;
+  cursor: pointer;
+  color: #454245;
+}
+.slack__nav ul.nav ul.drop1 li:hover {
+  color: hsl(206, 76%, 36%);
+}
+.slack__nav ul.nav ul.drop1.open {
+  max-height: 50rem;
+  transition: 0.5s ease;
+  background: hsl(0, 0%, 100%);
+}
+.footer ul li {
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  font-weight: bold;
+}
+.footer ul li a {
+  color: hsl(0, 0%, 0%);
+}
+.footer .modal {
+  padding: 2rem;
+  overflow-y: auto;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: hsl(217, 89%, 61%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.footer .modal.active {
+  display: block;
+}
+.footer .modal button {
+  float: right;
+  top: 0;
 }/*# sourceMappingURL=main.css.map */

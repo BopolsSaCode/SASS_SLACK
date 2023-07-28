@@ -1,6 +1,6 @@
 .header {
     z-index: 999;
-    background: $clr-dprimary;
+    background: $clr-primary;
     position: relative;
     position: fixed;
     width: 100%;
@@ -10,7 +10,7 @@
     &.white{
         background: transparent;
         .container{
-            background:$clr-dprimary;
+            background:$clr-primary;
             border-radius: 5rem;
             margin-top: 1rem;
             transition: 1s ease;
