@@ -615,6 +615,8 @@
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        border-bottom:1px solid hsl(0, 0%, 90%);
+        padding-bottom: 3rem;
     }
     &__nav{
         ul.nav{
@@ -655,7 +657,7 @@
                     }
                 }
                 &.open{
-                    max-height: 50rem;
+                    max-height: 60rem;
                     transition: .5s ease;
                     background: $clr-light;
                 }
@@ -664,5 +666,17 @@
     }
 
     @include mediaQuery($break-lg){
+        ul.nav{
+            flex-direction: row;
+            gap: 10rem;
+            li{
+                a{
+                    justify-content: center;
+                    i{
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }

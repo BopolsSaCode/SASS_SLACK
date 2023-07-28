@@ -1499,6 +1499,8 @@ body.body.open {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+  padding-bottom: 3rem;
 }
 .slack__nav ul.nav {
   display: flex;
@@ -1537,35 +1539,70 @@ body.body.open {
   color: hsl(206, 76%, 36%);
 }
 .slack__nav ul.nav ul.drop1.open {
-  max-height: 50rem;
+  max-height: 60rem;
   transition: 0.5s ease;
   background: hsl(0, 0%, 100%);
 }
-.footer ul li {
+@media screen and (min-width: 940px) {
+  .slack ul.nav {
+    flex-direction: row;
+    gap: 10rem;
+  }
+  .slack ul.nav li a {
+    justify-content: center;
+  }
+  .slack ul.nav li a i {
+    display: none;
+  }
+}
+
+.footer__left li {
   font-size: 1.4rem;
   padding: 2rem 0;
   font-weight: bold;
 }
-.footer ul li a {
+.footer__left li a {
   color: hsl(0, 0%, 0%);
 }
-.footer .modal {
+.footer__left .modal {
+  position: fixed;
   padding: 2rem;
   overflow-y: auto;
-  display: none;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: fixed;
-  background: hsl(217, 89%, 61%);
-  top: 0;
-  left: 0;
-  bottom: 0;
+  background: blue;
+  display: none;
   z-index: 9999;
 }
-.footer .modal.active {
+.footer__left .modal.active {
   display: block;
 }
-.footer .modal button {
+.footer__left .modal button {
   float: right;
-  top: 0;
+  background: transparent;
+  border: 0 solid transparent;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 940px) {
+  .footer__left li {
+    font-size: 1.6rem;
+    padding: 2rem 0;
+    font-weight: bold;
+  }
+  .footer__left li a {
+    color: hsl(0, 0%, 0%);
+  }
+  .footer__left .modal {
+    background: hsl(0, 0%, 100%);
+    border: 1px solid black;
+    max-width: 72rem;
+    height: auto;
+    margin: 0 auto;
+    bottom: 15rem;
+  }
 }/*# sourceMappingURL=main.css.map */
