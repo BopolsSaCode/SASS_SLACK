@@ -1,7 +1,7 @@
 .banner {
     padding-top: 10rem;
-    background: $clr-primary;
     position: relative;
+    background: $clr-primary;
     .container{
         padding:0 1rem;
     }
@@ -609,14 +609,13 @@
 }
 
 .slack{
-    padding: 2rem 0;
     &__wrapper{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
         border-bottom:1px solid hsl(0, 0%, 90%);
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
     }
     &__nav{
         ul.nav{
@@ -679,4 +678,94 @@
             }
         }
     }
+}
+
+.work{
+    background-color: $clr-fwhite;
+    .tns-nav {
+        text-align: center;
+      
+        button {
+         display: inline-block;
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         border: none;
+         background-color: #b3b2b2;
+         margin: 0 8px;
+         cursor: pointer;
+      
+         &.tns-nav-active {
+          transition: .5s ease;
+          background-color: $clr-primary;
+         }
+         &:not(.tns-nav-active) {
+          transition:.5s ease;
+          color: $clr-primary;
+         }
+        }
+       }
+    .slider{
+        width:100%;
+    }
+    padding: 4rem 0;
+    &__wrapper{
+        h2{
+            text-align: center;
+            font-size: 2.3rem;
+        }
+    }
+    .card{
+        cursor: pointer;
+        padding: 2rem 0;
+    }
+    .slider__item{
+        padding: 1rem;
+        background-color: $clr-light;
+        height: 40rem;
+        width: 25rem;
+        margin: 0 auto;
+        transition: .5s ease;
+        position: relative;
+        h5{
+            font-size: 1.4rem;
+            font-weight: lighter;
+            padding-bottom: 2rem;
+        }
+        img{
+            width: 100%;
+        }
+        &:hover{
+            transform: scale(1.05);
+            transition: .5s ease;
+            box-shadow: 0 0 10px rgba(33,33,33,.5);
+        }
+        .slider__actions{
+            a{
+                color: $clr-blue;
+                font-size: 1.2rem;
+                font-weight: 550;
+                position: absolute;
+                bottom: 2%;
+            }
+            i{
+                color: $clr-blue;
+                position: absolute;
+                bottom: 2%;
+                right: 2%;
+            }
+        }
+    }
+
+   @include mediaQuery($break-lg){
+
+        .slider__item{
+            height: 45rem;
+            width: 30rem;
+            h3{
+                font-size: 2.2rem;
+            }
+        }
+    }
+
 }
