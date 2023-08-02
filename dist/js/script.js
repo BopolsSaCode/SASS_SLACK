@@ -58,10 +58,10 @@ drop.forEach((link) => {
 
 drop1.forEach((link) => {
     link.addEventListener("click", () => {
-     link.querySelector(".drop1").classList.toggle("open");
-     link.querySelector("i").classList.toggle("open");
+        link.querySelector(".drop1").classList.toggle("open");
+        link.querySelector("i").classList.toggle("open");
     });
-   });
+    });
 
 const kamote = document.querySelector(".header");
 window.addEventListener("scroll", () => {

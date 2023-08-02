@@ -1121,7 +1121,7 @@ body.body.open {
   margin-bottom: 5rem;
 }
 .alternate__content:nth-child(even) video {
-  margin-left: 8rem;
+  margin-left: auto;
 }
 .alternate__content video {
   width: 40rem;
